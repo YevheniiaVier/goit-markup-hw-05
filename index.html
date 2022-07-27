@@ -61,7 +61,7 @@
             Ефективні рішення для<br />
             вашого бізнесу
           </h1>
-          <button type="button" class="btn primary">Замовити послугу</button>
+          <button type="button" class="btn primary" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -129,7 +129,6 @@
               <div class="activities-item">
                 <h3 class="activities-subtitle">Десктопні додатки</h3>
               </div>
-
             </li>
             <li class="item">
               <a href="">
@@ -141,9 +140,14 @@
             </li>
             <li class="item">
               <a href="">
-                <img src="./images/colorpallete.jpg" alt="Дизайнерські рішення" width="370" height="294" />
+                <img
+                  src="./images/colorpallete.jpg"
+                  alt="Дизайнерські рішення"
+                  width="370"
+                  height="294"
+                />
               </a>
-                <div class="activities-item">
+              <div class="activities-item">
                 <h3 class="activities-subtitle">Дизайнерські рішення</h3>
               </div>
             </li>
@@ -549,5 +553,11 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden"data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close></button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
