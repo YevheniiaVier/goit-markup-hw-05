@@ -575,7 +575,7 @@ footer .bottom {
   left: 0;
   transform: translateY(101%);
   transition: transform var(--time-function);
-overflow: auto;
+  overflow: auto;
 }
 
 .examples-card-text {
@@ -602,10 +602,16 @@ overflow: auto;
   position: fixed;
   top: 0;
   left: 0;
+  
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2)
+  background-color: rgba(0, 0, 0, 0.2);
   
+  opacity: 1;
+  
+  transition: opacity var(--time-function);
+  /* perspective: 600px; */
+
 }
 
 .backdrop.is-hidden {
@@ -618,13 +624,41 @@ overflow: auto;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-
+ 
   min-width: 528px;
   min-height: 581px;
 
-  background-color: #fff;
+  background-color: red;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 1000ms;
+  
+  opacity: 1;
+}
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.8);
+  
+}
+
+.modal-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--bg-white-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.icon-close {
+ width: 18px;
+ height: 18px;
+ fill: var(--black-text-color);
 }
