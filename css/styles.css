@@ -25,10 +25,17 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   background-color: var(--bg-white-color);
+  padding-top: 80px;
 }
 
 header {
   border-bottom: 1px solid #ececec;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color:  var(--bg-white-color) ;
+  z-index: 1;
 }
 h1,
 h2,
